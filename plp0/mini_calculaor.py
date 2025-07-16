@@ -1,69 +1,85 @@
-# Advanced Fun Calculator 🎉
+import tkinter as tk
+from tkinter import messagebox
 
-def get_number(prompt):
-    while True:
+class CalculatorApp:
+    def __init__(self, root):
+        self.root = root
+        root.title("Advanced Fun Calculator 🎉")
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.num1_label = tk.Label(self.root, text="First Number:")
+        self.num1_label.grid(row=0, column=0)
+        self.num1_entry = tk.Entry(self.root)
+        self.num1_entry.grid(row=0, column=1)
+
+        self.num2_label = tk.Label(self.root, text="Second Number:")
+        self.num2_label.grid(row=1, column=0)
+        self.num2_entry = tk.Entry(self.root)
+        self.num2_entry.grid(row=1, column=1)
+
+        self.operation_label = tk.Label(self.root, text="Operation:")
+        self.operation_label.grid(row=2, column=0)
+        self.operation_var = tk.StringVar(value="Addition (+)")
+        self.operations = [
+            "Addition (+)", "Subtraction (-)", "Multiplication (*)",
+            "Division (/)", "Power (^)", "Modulus (%)", "Integer Division (//)"
+        ]
+        self.operation_menu = tk.OptionMenu(self.root, self.operation_var, *self.operations)
+        self.operation_menu.grid(row=2, column=1)
+
+        self.calc_button = tk.Button(self.root, text="Calculate", command=self.calculate)
+        self.calc_button.grid(row=3, column=0, columnspan=2)
+
+        self.result_label = tk.Label(self.root, text="Result: ")
+        self.result_label.grid(row=4, column=0, columnspan=2)
+
+    def calculate(self):
         try:
-            return float(input(prompt))
+            num1 = float(self.num1_entry.get())
+            num2 = float(self.num2_entry.get())
         except ValueError:
-            print("Invalid input! Please enter a valid number.")
+            messagebox.showerror("Input Error", "Please enter valid numbers.")
+            return
 
-def show_menu():
-    print("\nSelect operation:")
-    print("1. Addition (+)")
-    print("2. Subtraction (-)")
-    print("3. Multiplication (*)")
-    print("4. Division (/)")
-    print("5. Power (^)")
-    print("6. Modulus (%)")
-    print("7. Integer Division (//)")
-    print("0. Exit")
-
-def calculate(num1, num2, choice):
-    if choice == '1':
-        return num1 + num2, "Sum"
-    elif choice == '2':
-        return num1 - num2, "Difference"
-    elif choice == '3':
-        return num1 * num2, "Product"
-    elif choice == '4':
-        if num2 == 0:
-            return "Error: Division by zero!", None
-        return num1 / num2, "Quotient"
-    elif choice == '5':
-        return num1 ** num2, "Power"
-    elif choice == '6':
-        if num2 == 0:
-            return "Error: Modulus by zero!", None
-        return num1 % num2, "Modulus"
-    elif choice == '7':
-        if num2 == 0:
-            return "Error: Integer division by zero!", None
-        return num1 // num2, "Integer Division"
-    else:
-        return None, None
-
-def main():
-    print("🎉 Welcome to the Advanced Fun Calculator! 🎉")
-    while True:
-        show_menu()
-        choice = input("Enter your choice (0-7): ")
-        if choice == '0':
-            print("Goodbye! 👋")
-            break
-        if choice not in [str(i) for i in range(8)]:
-            print("Invalid choice! Please select a valid option.")
-            continue
-        num1 = get_number("Enter the first number: ")
-        num2 = get_number("Enter the second number: ")
-        result, label = calculate(num1, num2, choice)
-        if label:
-            print(f"{label}: {result}")
+        op = self.operation_var.get()
+        if op == "Addition (+)":
+            result = num1 + num2
+            label = "Sum"
+        elif op == "Subtraction (-)":
+            result = num1 - num2
+            label = "Difference"
+        elif op == "Multiplication (*)":
+            result = num1 * num2
+            label = "Product"
+        elif op == "Division (/)":
+            if num2 == 0:
+                messagebox.showerror("Math Error", "Division by zero!")
+                return
+            result = num1 / num2
+            label = "Quotient"
+        elif op == "Power (^)":
+            result = num1 ** num2
+            label = "Power"
+        elif op == "Modulus (%)":
+            if num2 == 0:
+                messagebox.showerror("Math Error", "Modulus by zero!")
+                return
+            result = num1 % num2
+            label = "Modulus"
+        elif op == "Integer Division (//)":
+            if num2 == 0:
+                messagebox.showerror("Math Error", "Integer division by zero!")
+                return
+            result = num1 // num2
+            label = "Integer Division"
         else:
-            print(result)
-        again = input("Do you want to perform another calculation? (y/n): ").lower()
-        if again != 'y':
-            print("Thanks for using the calculator! 🚀")
-            break
+            result = "Unknown operation"
+            label = ""
+
+        self.result_label.config(text=f"Result ({label}): {result}")
 
 if __name__ == "__main__":
-    main()
+    root = tk.Tk()
+    app = CalculatorApp(root)
+    root.mainloop()
