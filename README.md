@@ -24,4 +24,4 @@ A simple GUI calculator built with Python and Tkinter.
 
 ## Author
 
-Your Name
+Powel Akubrecah
