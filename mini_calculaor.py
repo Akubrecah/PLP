@@ -1,4 +1,4 @@
-import tkinter as tk
+#Akubrecah Calculator
 from tkinter import messagebox
 
 class CalculatorApp:
