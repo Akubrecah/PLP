@@ -1,5 +1,3 @@
-# Advanced Fun Calculator
-
 A simple GUI calculator built with Python and Tkinter.
 
 ## Features
@@ -20,7 +18,7 @@ A simple GUI calculator built with Python and Tkinter.
 ## Requirements
 
 - Python 3.x
-- Tkinter (`sudo apt-get install python3-tk` on Ubuntu/Debian)
+- Tkinter
 
 ## Author
 
