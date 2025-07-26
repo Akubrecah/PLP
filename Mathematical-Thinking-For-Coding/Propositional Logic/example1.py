@@ -1,7 +1,7 @@
 A = True
 B = False
 
-# print(type("A and B:", A and B))
-print(type("A or B:", A or B))
-print(type("not A:", not A))
-print(type("A**B:", A ** B))  # This is equivalent to A and B in boolean context
+print("A and B:", A and B)  # Corrected: Uncomment and fix formatting
+print("A or B:", A or B)      # True
+print("not A:", not A)        # False
+print("A**B:", A ** B)        # 1 (integer, not boolean)
