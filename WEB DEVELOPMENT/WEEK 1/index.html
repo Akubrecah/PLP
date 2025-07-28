@@ -8,12 +8,249 @@
     <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages.</p>
     <h2>Lists</h2>
     <h3>Ordered Lists</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <h3>Ordered Lists with Roman Numerals</h3>
+    <ol type="i">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Ordered Lists with Lowercase Roman Numerals</h3>
+    <ol type="i">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Ordered Lists with Uppercase Roman Numerals</h3>
+    <ol type="I">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Ordered Lists with Lowercase Letters</h3>
+    <ol type="a">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Ordered Lists with Uppercase Letters</h3>
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Ordered Lists with Numbers</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Unordered Lists</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    
+    <h3>Unordered Lists with Dashes</h3>
+    <ul style="list-style-type: none;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>Unordered Lists with Dots</h3>
+    <ul style="list-style-type: disc;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <h3>Unordered Lists with Circles</h3>
+    <ul style="list-style-type: circle;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>Unordered Lists with Squares</h3>
+    <ul style="list-style-type: square;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Headings</h2>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <h2>Paragraphs</h2>
+    <p>This is a paragraph. It contains text that is displayed on the web page.</p>
+    <p>This is another paragraph. It can contain more text and can be styled with CSS.</p>
+    <h2>Text Formatting</h2>
+    <p><strong>Bold Text</strong> is used to emphasize important words.</p>
+    <p><em>Italic Text</em> is used for emphasis or to indicate a title.</p>
+    <p><u>Underlined Text</u> is often used for links or to highlight important information.</p>
+    <p><mark>Highlighted Text</mark> is used to draw attention to specific parts of the text.</p>
+    <p><small>Small Text</small> is used for less important information.</p>
+    <p><del>Deleted Text</del> is used to indicate text that has been removed.</p>  
+    <p><ins>Inserted Text</ins> is used to indicate text that has been added.</p>
+    <p><sub>Subscript Text</sub> is used for chemical formulas or mathematical expressions.</p>
+    <p><sup>Superscript Text</sup> is used for exponents or footnotes.</p>
+    <h2>Blockquotes</h2>
+    <blockquote>
+        <p>This is a blockquote. It is used to display a quote or a citation
+        from another source.</p>
+    </blockquote>
+    <h2>Code</h2>
+    <p>This is an example of inline code: <code>console.log('Hello, World!');</code></p>
+    <p>This is a code block:</p>
+    <pre>
+<code>
+function greet() {
+    console.log('Hello, World!');
+}
+greet();
+</code>
+    </pre>
+    <h2>Horizontal Rule</h2>
+    <hr>
+    <p>This is a horizontal rule. It is used to separate content on the page.</p>
+    <h2>Tables</h2>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+    </table>
+    <h2>Lists</h2>
+    <h3>Ordered Lists</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <h3>Unordered Lists</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <h3>Definition Lists</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        <dt>JavaScript</dt>
+        <dd>A programming language for web development</dd>
+    </dl>
+    <h2>Forms</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"
+        required></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Buttons</h2>
+    <button type="button">Click Me!</button>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <h2>Input Types</h2>
+    <form>
+        <label for="text">Text Input:</label>
+        <input type="text" id="text" name="text">
+        <br>
+        <label for="password">Password Input:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <label for="email">Email Input:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="number">Number Input:</label>
+        <input type="number" id="number" name="number" min="1" max="10">
+        <br>
+        <label for="date">Date Input:</label>
+        <input type="date" id="date" name="date">
+        <br>
+        <label for="color">Color Input:</label>
+        <input type="color" id="color" name="color">
+        <br>
+        <label for="checkbox">Checkbox Input:</label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <br>
+        <label for="radio">Radio Input:</label>
+        <input type="radio" id="radio1" name="radio" value="option1"> Option 1
+        <input type="radio" id="radio2" name="radio" value="option2"> Option 2
+        <br>
+        <label for="file">File Input:</label>
+        <input type="file" id="file" name="file">
+        <br>
+        <label for="range">Range Input:</label>
+        <input type="range" id="range" name="range" min="0" max="100">
+        <br>
+        <label for="search">Search Input:</label>
+        <input type="search" id="search" name="search">
+        <br>
+        <label for="tel">Telephone Input:</label>
+        <input type="tel" id="tel" name="tel">
+        <br>
+        <label for="url">URL Input:</label>
+        <input type="url" id="url" name="url">
+        <br>
+        <label for="time">Time Input:</label>
+        <input type="time" id="time" name="time">
+
+
+    <h2>More Lists</h2>
+    <h3>Ordered Lists</h3>
     <ol type="i">HTML</ol>
+    <ol type="i">CSS</ol>
+    <ol type="i">JavaScript</ol>
+    <h3>Ordered Lists with Roman Numerals</h3>
+    <ol type="i">HTML
+
+    </ol>
     <ol type="i">CSS</ol>
     <ol type="i">JavaScript</ol>
     <h3>Ordered Lists with Numbers</h3>
     <ol>HTML</ol>
-    
+
     <ol>CSS</ol>
     <ol>JavaScript</ol>
     <h3>Unordered Lists</h3>
