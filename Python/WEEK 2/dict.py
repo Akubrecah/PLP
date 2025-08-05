@@ -18,3 +18,14 @@ print("John's allergies:", patients["P881"]["allergies"])  # ['Penicillin']
 
 # Add new patient
 patients["P883"] = {"name": "Alex Kim", "allergies": ["Latex"], "ward": "ER"}
+
+print("Nurse on Duty:", staff[202]['name'])  # Nurse Lee
+# Output: Nurse Lee
+print("Garcia's allergies:", patients["P882"]["allergies"])  # ['Smoke']
+# Update staff role
+staff[303]["role"] = "Chief Radiologist"
+print("Updated Radiologist Role:", staff[303]["role"])  # Chief Radiologist
+# Output: Chief Radiologist
+# Remove a patient record
+del patients["P881"]
+print("Remaining Patients:", patients)  # {'P882': {'name': 'Maria Garcia
