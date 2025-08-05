@@ -10,7 +10,7 @@ er_queue.append("Broken Arm")        # Stable case
 er_queue.append("Severe Burn")       # Critical case
 er_queue.appendleft("Heart Attack")  # MOST critical
 er_queue.append("Flu")              # Stable case
-er_queue.append("Shortness of Breath")  # Critical case
+er_queue.appendleft("Shortness of Breath")  # Critical case
 
 print("ER Queue:", list(er_queue))  
 # Output: ['Heart Attack', 'Broken Arm', 'Severe Burn']
